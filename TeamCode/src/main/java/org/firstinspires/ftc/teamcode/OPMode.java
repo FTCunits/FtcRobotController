@@ -69,6 +69,7 @@ public class OPMode extends LinearOpMode {
         // Connect to servo (Assume PushBot Left Hand)
         // Change the text in quotes to match any servo name on your robot.
         servo = hardwareMap.get(Servo.class, "arm_servo");
+        servo.getController().pwmEnable();
 
         // Wait for the start button
         telemetry.addData(">", "Press Start to scan Servo." );
